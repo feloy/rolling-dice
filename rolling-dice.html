@@ -1,0 +1,99 @@
+<style>
+.spinner {
+  width: 30px;
+  height: 30px;
+  margin: 100px auto;
+  position:relative;
+  /*border: 1px solid black;*/
+}
+.ball {
+  height: 50px;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  background: rgba( 0, 255, 0, .5);
+  border-radius: 50%;
+  float: left;
+  position: absolute;
+/*  border: 1px solid black;*/
+}
+
+.ball-1 {
+  top: 50%;
+  left: 50%;
+  animation: ball1 2s 0s ease infinite;
+  z-index: 1;
+}
+@keyframes ball1 {
+  50% {
+    top: -100%;
+    left: 200%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+  }
+}
+
+.ball-2 {
+  top: 50%;
+  left: 50%;
+  animation: ball2 2s 0s ease infinite;
+  z-index: 2;
+}
+@keyframes ball2 {
+  50% {
+    top: 200%;
+    left: 200%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+  }
+}
+
+.ball-3 {
+  top: 50%;
+  left: 50%;
+  animation: ball3 2s 0s ease infinite;
+  z-index: 1;
+}
+
+@keyframes ball3 {
+  50% {
+    top: 200%;
+    left: -100%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+  }
+}
+
+.ball-4 {
+  top: 50%;
+  left: 50%;
+  animation: ball4 2s 0s ease infinite;
+  z-index: 2;
+}
+
+@keyframes ball4 {
+  50% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+  }
+}</style>
+<div class="spinner">
+  <div class="ball ball-1"></div>
+  <div class="ball ball-2"></div>
+  <div class="ball ball-3"></div>
+  <div class="ball ball-4"></div>
+</div>
